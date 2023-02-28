@@ -8,21 +8,21 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 function App() {
   return (
     <Router>
-
       <Navigation />
-
       <Switch>
-        <Route path="/:type/:id">
-          <PetDetailsPage />
+        <Route path='/pet-details-not-found'>
+          <PetDetailsNotFound />
         </Route>
-
-        <Route path="/:type?">
-          <HomePage />
-        </Route>
-
         <Route path="/search">
           <SearchPage />
         </Route>
+        <Route path="/:type/:id">
+          <PetDetailsPage />
+        </Route>
+        <Route path="/:type?">
+          <HomePage />
+        </Route>
+        
       </Switch>
 
       
